@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mahabba Éditions — Éclairer par amour du savoir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;500&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <a href="#accueil" class="brand" data-go="accueil">
+      <span class="brand-ar">محبة</span>
+      <span class="brand-fr">Mahabba Éditions</span>
+    </a>
+    <nav>
+      <a href="#accueil" data-go="accueil">Accueil</a>
+      <a href="#presentation" data-go="presentation">Présentation</a>
+      <a href="#auteurs" data-go="auteurs">Auteurs</a>
+      <a href="#livres" data-go="livres">Nos livres</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="satin">
+      <video class="satin-video" src="satin.mp4" autoplay muted loop playsinline
+             onerror="this.remove()"></video>
+      <div class="fold f1"></div>
+      <div class="fold f2"></div>
+      <div class="fold f3"></div>
+      <div class="light"></div>
+    </div>
+
+    <!-- arabesques décoratives -->
+    <svg class="corner tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#arabesque"/></svg>
+    <svg class="corner br" viewBox="0 0 200 200" aria-hidden="true"><use href="#arabesque"/></svg>
+
+    <div class="hero-inner">
+      <svg class="orn orn-top" viewBox="0 0 200 20" aria-hidden="true"><use href="#ornement"/></svg>
+      <h1 class="hero-title">MAHABBA</h1>
+      <p class="hero-motto">Éclairer par amour du savoir</p>
+      <svg class="orn orn-mid" viewBox="0 0 200 20" aria-hidden="true"><use href="#ornement"/></svg>
+      <p class="hero-sub">Une maison d’édition dédiée à la transmission du savoir islamique<br>à travers des ouvrages authentiques, accessibles et inspirants.</p>
+      <button id="more" class="btn btn-gold">En savoir plus</button>
+    </div>
+    <div class="chevron" aria-hidden="true">⌄</div>
+  </section>
+
+  <!-- CONTENU (révélé au clic sur « En savoir plus ») -->
+  <main id="contenu" class="hidden">
+
+    <!-- PRÉSENTATION -->
+    <section id="presentation" class="section">
+      <div class="container narrow">
+        <div class="arch-lamp" aria-hidden="true">☪</div>
+        <h2 class="title">Présentation de<br>Mahabba Éditions</h2>
+        <svg class="orn" viewBox="0 0 200 20" aria-hidden="true"><use href="#ornement"/></svg>
+        <blockquote class="quote">« Le monde est amour, la vie est amour, la religion est amour. »</blockquote>
+
+        <h3>Mahabba : l’amour comme chemin vers la connaissance</h3>
+        <p><strong>Mahabba</strong> (<span class="ar">محبة</span>) signifie l’amour pur et sincère en arabe. En Islam, l’amour occupe une place essentielle : l’amour d’Allah, de Son Messager ﷺ, du savoir et du bien.</p>
+        <p>C’est autour de cette notion que naît Mahabba Éditions, avec la volonté de faire du livre un moyen de transmettre le savoir, d’éclairer les esprits et de rapprocher les cœurs des valeurs de l’Islam.</p>
+
+        <h3>La genèse du projet</h3>
+        <p>L’idée de Mahabba Éditions est née au confluent des bénédictions du Gamou. À l’approche de cette nuit sacrée célébrant la naissance du Meilleur des êtres ﷺ, les portes du ciel s’ouvrent généreusement et les énergies positives rayonnent d’un éclat incomparable. C’est dans cette atmosphère de lumière, de gratitude et de ferveur spirituelle qu’est apparue la volonté d’œuvrer pour la diffusion du savoir et de la sagesse.</p>
+
+        <h3>Notre mission</h3>
+        <p>Mahabba Éditions a pour mission de rendre le savoir islamique accessible à tous, à travers des ouvrages simples, utiles et enracinés dans la tradition islamique. Nous souhaitons notamment publier des ouvrages portant sur :</p>
+        <ul class="mission">
+          <li><strong>La Sîra</strong>, pour mieux connaître et aimer le Prophète Muhammad ﷺ ;</li>
+          <li><strong>Le Fiqh</strong>, pour faciliter la compréhension et la pratique de la religion ;</li>
+          <li><strong>Le soufisme et la spiritualité islamique</strong>, pour éclairer les dimensions spirituelles de l’Islam et faire découvrir l’héritage des maîtres de la voie ;</li>
+          <li><strong>L’Islam et ses valeurs</strong>, afin de mettre en lumière sa beauté, sa sagesse et sa miséricorde ;</li>
+          <li><strong>Les questions contemporaines</strong>, pour apporter un éclairage spirituel sur les réalités de notre époque.</li>
+        </ul>
+
+        <h3>Notre ambition</h3>
+        <p>À travers chaque ouvrage, Mahabba Éditions souhaite transmettre un savoir, éveiller une conscience et nourrir un amour : l’amour d’Allah, de Son Messager ﷺ, du savoir et du bien. Nous demandons à Allah de bénir cette initiative, d’en purifier les intentions et d’en faire une œuvre utile et durable.</p>
+
+        <p class="signature">Mahabba Éditions — Transmettre par amour, éclairer par le savoir.</p>
+        <p class="salat ar" dir="rtl">اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ الْفَاتِحِ لِمَا أُغْلِقَ، وَالْخَاتِمِ لِمَا سَبَقَ، نَاصِرِ الْحَقِّ بِالْحَقِّ، وَالْهَادِي إِلَى صِرَاطِكَ الْمُسْتَقِيمِ، وَعَلَى آلِهِ حَقَّ قَدْرِهِ وَمِقْدَارِهِ الْعَظِيمِ</p>
+      </div>
+    </section>
+
+    <!-- AUTEURS -->
+    <section id="auteurs" class="section alt">
+      <div class="container">
+        <h2 class="title">Nos auteurs</h2>
+        <svg class="orn" viewBox="0 0 200 20" aria-hidden="true"><use href="#ornement"/></svg>
+        <div id="authors" class="authors"></div>
+      </div>
+    </section>
+
+    <!-- LIVRES -->
+    <section id="livres" class="section">
+      <div class="container">
+        <h2 class="title">Nos ouvrages</h2>
+        <svg class="orn" viewBox="0 0 200 20" aria-hidden="true"><use href="#ornement"/></svg>
+        <div id="books" class="books"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <svg class="orn" viewBox="0 0 200 20" aria-hidden="true"><use href="#ornement"/></svg>
+      <p>Mahabba Éditions — Transmettre par amour, éclairer par le savoir.</p>
+      <p class="small">© <span id="year"></span> Mahabba Éditions</p>
+    </footer>
+  </main>
+
+  <!-- FICHE LIVRE -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" id="close" aria-label="Fermer">×</button>
+      <div class="modal-cover" id="m-cover"></div>
+      <div class="modal-info">
+        <h3 id="m-title"></h3>
+        <svg class="orn left" viewBox="0 0 200 20" aria-hidden="true"><use href="#ornement"/></svg>
+        <p id="m-desc"></p>
+        <dl>
+          <dt>Auteur</dt><dd id="m-author"></dd>
+          <dt>Format</dt><dd>PDF</dd>
+          <dt>Langue</dt><dd id="m-lang"></dd>
+          <dt>Pages</dt><dd id="m-pages"></dd>
+        </dl>
+        <a id="m-dl" class="btn btn-gold" href="#" target="_blank" rel="noopener">⬇ Télécharger le PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYMBOLES SVG réutilisables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="ornement" viewBox="0 0 200 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+          <line x1="10" y1="10" x2="82" y2="10"/>
+          <line x1="118" y1="10" x2="190" y2="10"/>
+          <path d="M100 2 L106 10 L100 18 L94 10 Z"/>
+          <circle cx="88" cy="10" r="2"/>
+          <circle cx="112" cy="10" r="2"/>
+        </g>
+      </symbol>
+      <symbol id="arabesque" viewBox="0 0 200 200">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="0" cy="0" r="40"/><circle cx="0" cy="0" r="70"/>
+          <circle cx="0" cy="0" r="100"/><circle cx="0" cy="0" r="130"/>
+          <circle cx="0" cy="0" r="160"/>
+          <path d="M0 40 Q40 40 40 0 M0 70 Q70 70 70 0 M0 100 Q100 100 100 0 M0 130 Q130 130 130 0"/>
+          <path d="M30 30 Q60 60 90 30 Q60 0 30 30 M60 60 Q90 90 120 60 Q90 30 60 60"/>
+          <path d="M20 100 Q50 130 80 100 Q50 70 20 100 M100 20 Q130 50 100 80 Q70 50 100 20"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
