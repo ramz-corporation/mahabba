@@ -87,6 +87,7 @@ $('#year').textContent = new Date().getFullYear();
   if (!v) return;
   v.muted = true;
   v.setAttribute('playsinline', '');
+  v.addEventListener('playing', () => v.classList.add('ready'));
   // si la vidéo ne se charge pas, on la retire : le tissu CSS prend le relais
   const src = v.querySelector('source');
   if (src) src.addEventListener('error', () => v.remove());
