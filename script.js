@@ -97,6 +97,6 @@ $('#year').textContent = new Date().getFullYear();
   v.addEventListener('canplay', tryPlay);
   // si le navigateur bloque la lecture automatique (ex. économie d'énergie iPhone),
   // le premier toucher ou défilement lance la vidéo
-  ['touchstart', 'click', 'scroll'].forEach(ev =>
+    ['touchend', 'click'].forEach(ev =>
     window.addEventListener(ev, tryPlay, { once: true, passive: true }));
 })();
