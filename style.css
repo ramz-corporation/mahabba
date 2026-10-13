@@ -52,7 +52,10 @@ body {
 .satin-video {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;
 }
-
+.satin-video { pointer-events: none; }
+.satin-video::-webkit-media-controls,
+.satin-video::-webkit-media-controls-start-playback-button,
+.satin-video::-webkit-media-controls-overlay-play-button { display: none !important; -webkit-appearance: none; }
 /* voile léger : garde le titre bleu nuit lisible sur la vidéo */
 .veil {
   position: absolute; inset: 0; z-index: 3; pointer-events: none;
