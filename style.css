@@ -224,3 +224,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .fold, .light, .chevron { animation: none; }
 }
+.satin { background: url('img/satin-poster.jpg') center / cover no-repeat, linear-gradient(135deg, #f7ecda, #ead6b9 60%, #f2e3cb); }
+.satin-video { opacity: 0; transition: opacity 1s ease; }
+.satin-video.ready { opacity: 1; }
