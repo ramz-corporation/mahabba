@@ -81,14 +81,22 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBook(
 
 $('#year').textContent = new Date().getFullYear();
 
-/* ----- Vidéo de soie : fondu à l'apparition, repli propre si absente ----- */
+/* ----- Vidéo de soie : lecture robuste sur mobile ----- */
 (function () {
   const v = document.querySelector('.satin-video');
   if (!v) return;
-  v.addEventListener('playing', () => v.classList.add('ready'));
-  v.addEventListener('canplay', () => v.play().catch(() => {}));
+  v.muted = true;
+  v.setAttribute('playsinline', '');
   // si la vidéo ne se charge pas, on la retire : le tissu CSS prend le relais
   const src = v.querySelector('source');
   if (src) src.addEventListener('error', () => v.remove());
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) v.pause();
+  // l'utilisateur a demandé moins d'animations : on garde seulement l'image fixe
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.pause(); return; }
+  const tryPlay = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+  tryPlay();
+  v.addEventListener('canplay', tryPlay);
+  // si le navigateur bloque la lecture automatique (ex. économie d'énergie iPhone),
+  // le premier toucher ou défilement lance la vidéo
+  ['touchstart', 'click', 'scroll'].forEach(ev =>
+    window.addEventListener(ev, tryPlay, { once: true, passive: true }));
 })();
